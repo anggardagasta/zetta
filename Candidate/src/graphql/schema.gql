@@ -1,0 +1,45 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Candidate {
+  email: String!
+  name: String!
+  status: String
+}
+
+input CandidateInput {
+  accountHolderName: String
+  bic: String
+  campus: String
+  civility: String
+  iban: String
+  parents: [ParentInput!]
+  school: String
+  sex: String
+}
+
+type Mutation {
+  updateCandidate(updateCandidateInput: UpdateCandidateInput!): Candidate!
+}
+
+input ParentInput {
+  accountHolderName: String
+  bic: String
+  iban: String
+}
+
+type Query {
+  hello: String!
+}
+
+input UpdateCandidateInput {
+  _id: ID!
+  candidateInput: CandidateInput!
+  isFromAdmissionForm: String!
+  isMinorStudent: String!
+  isPreventResendNotif: String!
+  isSaveIdentityStudent: String!
+  lang: String!
+  newDesiredProgram: String!
+}
